@@ -1,4 +1,4 @@
-# Windows 11 Requirements Bypass
+# Windows 11 Requirements Bypass [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshirooo39%2FWindows-11-Bypass&count_bg=%2338A0C1&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 Install Windows 11 on unsupported machines.\
 The idea behind this simple batch script is to allow the installation of Windows 11 operating system on unsupported machines due to its requirements and making it easier and more simple, than doing it manually (adding the registry keys one-by-one).\
 Not only that, but by using this script, it's much safer than using a "homebrewed patched" ISO that are floating around on the internet.
