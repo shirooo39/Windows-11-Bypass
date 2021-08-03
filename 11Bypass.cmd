@@ -1,8 +1,11 @@
 @echo off
 rem ==================================================
 rem  Windows 11 Requirements Bypass
-rem --------------------------------------------------
+rem ==================================================
+rem
 rem  Written by Shiro39
+rem  Last modified 2021-08-03
+rem
 rem ==================================================
 cls
 
@@ -12,17 +15,17 @@ echo ==================================================
 echo.
 
 echo Adding key "BypassCPUCheck" into registry...
-reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassCPUCheck" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassCPUCheck" /f /t REG_DWORD /d 1 > nul
 echo Adding key "BypassStorageCheck" into registry...
-reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassStorageCheck" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassStorageCheck" /f /t REG_DWORD /d 1 > nul
 echo Adding key "BypassRAMCheck" into registry...
-reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassRAMCheck" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassRAMCheck" /f /t REG_DWORD /d 1 > nul
 echo Adding key "BypassTPMCheck" into registry...
-reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassTPMCheck" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassTPMCheck" /f /t REG_DWORD /d 1 > nul
 echo Adding key "BypassSecureBootCheck" into registry...
-reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassSecureBootCheck" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassSecureBootCheck" /f /t REG_DWORD /d 1 > nul
 echo Adding additional key "AllowUpgradesWithUnsupportedTPMOrCPU" into registry...
-reg add "HKLM\SYSTEM\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /t REG_DWORD /d 1 > nul
+reg add "HKLM\SYSTEM\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /f /t REG_DWORD /d 1 > nul
 
 echo.
 echo All the needed registries to bypass the requirements has been added.
