@@ -9,16 +9,49 @@ rem
 rem ================================================================================
 title Windows 11
 mode con:cols=80 lines=20
-cls
 
-:: BatchGotAdmin
-:: https://sites.google.com/site/eneerge/scripts/batchgotadmin
+REM  --> Check for permissions
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    goto firstpage
+) else ( 
+	goto gotAdmin
+)
+
+:firstpage
+cls
+echo Where are you running this script on?
+echo.
+echo  1. On the currently running Windows
+echo  2. On the installation
+echo.
+echo.
+echo Do NOT choose option 1 if you are on the installation!
+echo It will cause an infinite loop!
+echo.
+set /p input=Input: 
+if /i "%input%" == "1" (
+	set "input="
+	goto BatchGotAdmin
+) 
+if /i "%input%" == "2" (
+	set "input="
+	goto main
+) else (
+	set "input="
+	goto firstpage
+)
+
+:BatchGotAdmin
+REM https://sites.google.com/site/eneerge/scripts/batchgotadmin
 :-------------------------------------
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
+	cls
     echo Requesting administrative privileges...
     goto UACPrompt
 ) else ( goto gotAdmin )
@@ -36,6 +69,8 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
+:main
+cls
 echo ================================================================================
 echo  Windows 11 Requirements Bypass
 echo ================================================================================
