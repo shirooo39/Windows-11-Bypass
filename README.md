@@ -1,3 +1,6 @@
+# Is this still working with the new 22H2 build?
+Yes. I fresh installed my Windows from 11 to 10 back to 11 again and I find it surprising that the registry method still work.
+
 # Windows 11 Requirements Bypass [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshirooo39%2FWindows-11-Bypass&count_bg=%2338A0C1&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 A simple batch script that helps you bypass Windows 11's system requirements by applying some registry hacks.  
